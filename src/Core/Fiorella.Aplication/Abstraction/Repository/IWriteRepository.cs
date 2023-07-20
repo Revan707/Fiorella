@@ -2,7 +2,7 @@
 
 namespace Fiorella.Aplication.Abstraction.Repository;
 
-public interface IReadRepository<T> : IRepository<T> where T : BaseEntity, new()
+public interface  IWriteRepository<T> : IRepository<T> where T : BaseEntity, new()
 {
     Task AddAsync(T entity);
     Task AddRangeAsync(ICollection<T> entities);
